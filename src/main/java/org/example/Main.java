@@ -8,8 +8,11 @@ public class Main {
     }
 }
 class Solution {
-    public int solution(int num1, int num2) {
+    public int solution(int angle) {
+        if (angle == 180) return 4;
+        else if (angle > 90) return 3;
+        else if (angle < 90) return 1;
 
-        return num1 == num2 ? 1:-1;
+        return angle;
     }
 }
