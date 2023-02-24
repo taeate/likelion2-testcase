@@ -5,31 +5,53 @@ public class Main {
 
         전사 a전사 = new 전사();
 
+        String 이름 = "칸";
+        a전사.이름 = 이름;
+        a전사.나이 = 20;
+        a전사.자기소개();
 
-        a전사.공격("브라이언","칼");
-        // 브라이언이(가) 칼(으)로 공격합니다.
+        a전사.나이 = 30;
+        a전사.이름 = "카니";
+        a전사.자기소개();
 
-        a전사.공격("필립","창");
-        // 필립이(가) 창(으)로 공격합니다.
+        a전사.a무기 = new 활();
+        a전사.공격();
+        // 출력 : 카니가 활로 공격합니다.
 
-        a전사.공격("마크","지팡이");
-        // 마크(가) 지팡이(으)로 공격합니다.
+        a전사.a무기 = new 칼();
+        a전사.공격();
+        // 출력 : 카니가 칼로 공격합니다.
 
     }
 }
+class 전사 {
+    String 이름;
+    int 나이;
+    무기 a무기;
 
-class 전사{
-    String lastName_;
-    String lastWeaponName;
-    void 공격(String name, String weaponName){
-        System.out.println( name +"(이)가" + weaponName +"로 공격합니다.");
-
-        lastName_ = name;
-        lastWeaponName = weaponName;
+    public void 자기소개() {
+        System.out.println("안녕하세요 저는 " + this.나이 + "살 " + this.이름 + " 입니다.");
     }
-    void 재공격(){
-        System.out.println( lastName_ +"(이)가" + lastWeaponName +"로 공격합니다.");
+
+    public void 공격() {
+        this.a무기.사용(this.이름);
     }
 }
+
+class 무기{
+    public void 사용(String 사용자명){
+    }
+}
+class 활 extends 무기 {
+    public void 사용(String 사용자명){
+        System.out.println( 사용자명 +" 활 로 공격합니다.");
+    }
+}
+class 칼 extends 무기{
+    public void 사용(String 사용자명){
+        System.out.println( 사용자명 + " 칼 로 공격합니다.");
+    }
+}
+
 
 
