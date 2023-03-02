@@ -25,10 +25,12 @@ public class App {
             }
             else if (cmd.equals("등록")) {
 
-                String wiseSaying = sc.nextLine().trim();
-                String writer = sc.nextLine().trim();
+                System.out.print("명언: ");
+                String content = sc.nextLine().trim();
+                System.out.print("작가: ");
+                String authorName = sc.nextLine().trim();
 
-                System.out.println("번 명언이 등록되었습니다.");
+                System.out.println("1번 명언이 등록되었습니다.");
             }
         }
     }
