@@ -3,11 +3,22 @@ package org.example;
 public class WiseSaying {
     private long id;
     private String content;
-    private String AuthorName;
+    private String authorName;
 
     public WiseSaying(long id, String content, String authorName) {
         this.id = id;
         this.content = content;
-        AuthorName = authorName;
+        this.authorName = authorName;
+    }
+
+    public long getId() {
+        return id;
+    }
+    public String getContent() {
+        return content;
+    }
+
+    public String getAuthorName() {
+        return authorName;
     }
 }
