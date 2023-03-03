@@ -10,11 +10,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class App {
-    private final Scanner sc;
-
-    public App(Scanner sc) {
-        this.sc = sc;
-    }
 
     public void run() {
 
@@ -22,13 +17,13 @@ public class App {
 
 
         SystemController systemController = new SystemController();
-        WiseSayingController wiseSayingController = new WiseSayingController(sc);
+        WiseSayingController wiseSayingController = new WiseSayingController();
 
         while (true) {
 
             System.out.print("명령) ");
 
-            String cmd = sc.nextLine().trim();
+            String cmd = Container.getScanner().nextLine().trim();
 
             if (cmd.equals("종료")) {
                 systemController.exit();

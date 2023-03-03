@@ -10,12 +10,13 @@ import java.util.List;
 
 class Main {
     public static void main(String[] args) {
+        // 공통적으로 사용 되는 것들을 모아두는 공간(Container) 초기화
+        Container.init();
 
-        Scanner sc = new Scanner(System.in);
+        new App().run();
 
-        new App(sc).run();
-
-        sc.close();
+        // 공통적으로 사용 되는 것들을 모아두는 공간(Container) 자원해제
+        Container.close();
     }
 }
 
